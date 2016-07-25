@@ -19,6 +19,8 @@ class Api::V1::ItemsController < ApplicationController
 
   private
   def item_params
+    # this can be used to pull out selected params from the hash, but a separate
+    # PORO function is better suited.
     params.require(:item).permit(:name, :description)
   end
 end
